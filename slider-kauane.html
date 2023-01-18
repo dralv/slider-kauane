@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* img {
+        border-radius: 100%;
+
+        width: 12rem;
+        height: 12rem;
+      } */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .slider {
+        width: 50%;
+        margin: 100px auto;
+      }
+
+      .slick-slide {
+        margin: 0px 20px;
+      }
+
+      .slick-slide img {
+        width: 100%;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: black;
+      }
+
+      .slick-slide {
+        transition: all ease-in-out 0.3s;
+      }
+
+      .slick-active {
+      }
+
+      .slick-current {
+      }
+
+      .conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .deslizar {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+    <title>slider</title>
+  </head>
+  <body>
+    <section class="deslizar slider">
+      <div class="conteiner">
+        <img src="./img/equipamentos.png" alt="" />
+        <div class="text">
+          <p>Equipamentos</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/conjuntos.png" alt="" />
+        <div class="text">
+          <p>Conjuntos</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/leggins.png" alt="" />
+        <div class="text">
+          <p>Legging</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/blusas.png" alt="" />
+        <div class="text">
+          <p>Blusas</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/jaquetas-moletons.png" alt="" />
+        <div class="text">
+          <p>Jaquetas / Moletons</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/shorts-bermudas.png" alt="" />
+        <div class="text">
+          <p>Shorts / Bermudas</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/top.png" alt="" />
+        <div class="text">
+          <p>Tops</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/acessorios.png" alt="" />
+        <div class="text">
+          <p>Acessórios</p>
+        </div>
+      </div>
+      <div class="conteiner">
+        <img src="./img/macacoes.png" alt="" />
+        <div class="text">
+          <p>Macacões</p>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript">
+      $('.deslizar').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      })
+    </script>
+  </body>
+</html>
